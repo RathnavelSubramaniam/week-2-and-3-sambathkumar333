@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Simulation - ball movement</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=w6mKtvI2ShthYEBz1BS4XjYsGjCn2Kec89RNMS6Q0a9RcTLoIE5b5joiyvSkesOSrvNBx_LlPxLt7sjLkgnNFMsUi9zFnBdIsVLtku491ba5okEwTJBGO-Ii9ubyavViakD-SMbOsUX_tJktHtWcCl11k1wMVNJQhx3X0qCVKRzg4hVSiIlmIsVMG87-Q_pk7T7wmf9ibX7GwlBAdUru6aFp1pQQvalh7jS5TxVet52Raeqwhvyxzx--CFDkbcAJIBxSD_-6-DJDNyOVEGXBz2o7ZgCqTlFLLFECBEVYb_lXlZikBuMXvMZhQ7w-2eKGJqvwAGGMOUhV4ILYm2JypMUuLNRpXqoELG4dHxX9C547bac7H7_MgjHvk8V7YlMjOMg7dPoqj1y27pNtGSPk1K8N58BILsi6owMQ6krvlFrzvGiYLh7zwdaBR1k2bh4usvYLNHme6ezuB7Z12esVqsbQQAkA7gfOFTiIGRXZItG46_RHGFaEWgGs14r94_uBTSrpwnL4SWKCI0CsyS7HwrjQ4FAzKLspYf_eLo37gY-FhWNCwXgIR6FX3RrK2pjC1OQr5wcyzFXm8pOVBWLqn4H00OZYJOqoWFzmp86rLlZ-lTn4H5Y8KXnpQhMxSgnND2rijig1JKy89MZSL5T4mKeXXU-JTg2YPHlvhIuNrppPlVdfh5cmCYslnBQ3kwUnbxx3WWxm5kkXuQrsko3NYZXi2eH03c3d2ki7dpqADjmBKSOPNtR0P6lZOVgqnw9zYpqX9Q6FOiN8RlKpt5XE0D5oCv_CjirYYSpH_TfRQ7XmVtBMlBnwZkTh8cHkoDaUk99k2LBk_5-Igy5IJBuNoEhUsaIrUczHwQB9U566UrpwKHdHYMTlDFq3czHzNPTd8vQsAuI82ll18f3tR926MtwL1wGwZPW64gfc85AwSOqjNXczbuK47Dht-KnCl5c1-w_UvHQJDLNv7Q5f_31enRgb9jlpQ2x7HnGUGSgokuu2jKfbCLfDyUwTGxUDWfY0KsHHfc8qmx8S69tlRUsm_ezwknb9uEZfefEDoOm9Rcn2qmJftzQMmXRD4IzGgP6T26tN3avGXpbGRSWycFff14RUV3VYFyYDg8ypDbjA7eGW37Xlp21mAEn2Yj63AxuZq-R927yt8cnT21ux2HecA_jLn7sO2Wt9vuNcI-e8_qQek1yDmmzchATfc5UzpK8ieM_K2ZoIqq27YeAtf6_t0w" nonce="e687a9e8cc7f30f4eed3a46f664a7090" charset="UTF-8"></script></head>
+ 
+<body>
+  <p>Refresh this page to see your code changes in action</p>
+  
+  <div 
+      id="ball"
+      style="z-index:5;
+      position:absolute;
+      top:200px;
+      left:0px;
+      top:200px;
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      background:yellow;">
+      </div>
+
+
+
+  
+</body>
+<script>
+var velocity = 100;
+var positionX = 0;
+var positionY = 0;
+var reverse = false;
+var ball = document.getElementById('ball');
+var Xmin = 0;
+var Xmax = 700;
+var Ymin = 0;
+var Ymin = 700;
+
+function moveBall() {
+
+if (!reverse){
+	positionX += velocity;
+    positionY += velocity;
+	ball.style.left = positionX + 'px';
+    ball.style.top = positionY + 'px';
+}
+else{
+	positionX -= velocity;
+    positionY -= velocity;
+	ball.style.left = positionX + 'px';
+    ball.style.top = positionY + 'px';
+}
+if((positionX > Xmax || positionX == Xmin) || (positionY > Ymax || positionY == Ymin )){
+	reverse = !reverse;
+}
+}
+setInterval(moveBall, 100);
+
+
+</script>
+
+</html>

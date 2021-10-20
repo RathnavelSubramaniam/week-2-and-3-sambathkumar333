@@ -1,0 +1,44 @@
+<html>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eBZzKoz-t33u_8Euj9cToZ0qNaoVrSQhB3HZzdBNcMBcpHFypjUJON9EfV01Hcsi4HmhzBlVPAWcwAaXfJuzALPHzLH6f2Wa9-LV_A4b1sIuzQ1fvfSI_RyBihK5wfDfjfC_KT6zzuGdj47RS24uoTDwPpqYzSe6wp0FfxBEqsyNlC9aIcc2NCyBAq_WJG2mIRJWp4gJ5NU9zh2GkQAvMU86x9IG08ZsNzUtKfS5odhLB6Wy_iUNKHUdGppQ0DdLoD-qI2khqE8my79qrHvfo9TPA4HCRuRvEW-Z6vHovnXT-YCbjeMHY3zUsjcpKeGfLL_Jc25jHWmv2GMAtWDjfaw2V-dkhtn7hLNELO2Ycy5cG-jkt-Nm3G5S-0CinRE5GGqDui55VpJJWQ34alHzw0si0AUWb_JXlCwm_MsYoDvfEyaT83OmsdRZAoxpTDkwLEGUrkVQA90atPGVDni1l3lBP6-5QVtPEUQ5WSNUrbkSCQP0D5aU6Nq87Sv7pNf2Wc06Utr5SEpLHDTYc5dOM_duUMIJYEVdbTIp19hGhN5fVCY-i40waDdV6T8TGrTZef9W7N5HFehx-PJIV2BYjIv36V9UOrsNzciE2Vd-eLwmDoLx0280SfbZ2gzSV7J29Z6NryAIFj6YoEnhU0x6Pvl01pPBhYpow0DIIR4km80quHIuzCw8DTstVs_azC7NuUYALbM4OgxET8tVdmM51s6_VFNfo16zEMlIGOvY2JIzgEpwtGR1JNarBkWkOLD-Iki7fzqzOWXg94R0tWDWAbf7EqDG2zbAd1toVS-qgw_9Q51zFKrdv2L-P3AMmNDsp8U-FEOSuWHaDgFSkY4Z4TX95j5BL3XUBLd3BYovaPPEpB_cOC-soCaMmY_hc7pRc9QMkMqf0Nj59QRbwjmpM2cMKRKRHznU0cuBMesj_8pPae74oj_CnZ4KfqraRE9Jk-HDoo5Leppt0ou1d2bRW12DCFSf1iucC0Cs0ggJe7eQ6AYK5Ix3WRDg6XwyNjgdLEuz2-dw_XS_lm_7jFxaFQlJTigqT7NbbTOapIp9AkvGSrlXh9VMH3mu7KU_b149mz5OEGkERqMuW_UBNVcfedsFUEHqRKaDdlxjzb2aztvo_tg-xBtBoIDt_Him4AQvDhl6pi1ldk8KxVO-yr15cOA92y2RNpE4VLyrMFn9n7O7-xsi0SaNiKbVtabASDDzrgohusLYyTfglj19XeY5-A" nonce="72d0bedd173ca95607317ec752211fa7" charset="UTF-8"></script><div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:green;"></div>
+
+<script>
+
+var velocity = 100;
+var positionX =0;
+var ball = document.getElementById('ball');
+var reverse = false;
+var Xmax =1000;
+var Xmin = 0;
+ 
+function moveBall()
+ {
+    if(!reverse)
+    {
+       positionX = positionX + velocity;
+        ball.style.left = positionX +'px';
+    }
+    else
+    {
+        positionX = positionX - velocity;
+        ball.style.left = positionX +'px';
+    }
+      if((positionX > Xmax)||(positionX == Xmin)){
+          reverse =!reverse;
+        }
+    }
+  setInterval(moveBall,100);
+
+
+
+// YOUR CODE 
+// ----------------
+</script>
+</html>
